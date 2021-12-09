@@ -10,7 +10,9 @@ import javax.swing.JOptionPane;
 public class ChangeCalculator {
 
 	public static void main(String[] args) {
-
+		
+		String pennyString = JOptionPane.showInputDialog("How many pennies do you have?");
+		int pennies = Integer.parseInt(pennyString);
 		// Ask the user how many nickels they have
 		String nickelString = JOptionPane.showInputDialog("How many nickels do you have?");
 		// Convert their answer to an int.   Hint: Integer.parseInt()  
@@ -22,7 +24,7 @@ public class ChangeCalculator {
 		String quarterString = JOptionPane.showInputDialog("How many quarters do you have?");
 		int quarters = Integer.parseInt(quarterString);
 		// Calculate how much money the user has.  Hint: Use a double variable 
-		double total = (nickels*0.05) + (dimes*0.10) + (quarters*0.25);
+		double total = (pennies*0.01) + (nickels*0.05) + (dimes*0.10) + (quarters*0.25);
 		// Tell the user how much money they have in dollars and cents format (e.g. $6.75)
 		JOptionPane.showMessageDialog(null, "You have $" + total);
 	}
